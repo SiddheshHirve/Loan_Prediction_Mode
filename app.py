@@ -67,7 +67,7 @@ features_scaled = scaler.transform(features)
 if st.button("🔍 Predict Loan Approval"):
     prediction = model.predict(features_scaled)[0]
     probability = model.predict_proba(features_scaled)[0][1]
-
+    display_prob = min(probability * 100, 99.0)
     st.markdown("---")
     if prediction == 1:
         st.success(f"✅ Loan Approved! (Probability: **{probability*100:.2f}%**)")
