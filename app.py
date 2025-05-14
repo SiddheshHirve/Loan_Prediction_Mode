@@ -70,9 +70,9 @@ if st.button("🔍 Predict Loan Approval"):
 
     st.markdown("---")
     if prediction == 1:
-        st.success(f"✅ Loan Approved! (Probability: **{probability:.2f}**)")
+        st.success(f"✅ Loan Approved! (Probability: **{probability*100:.2f}%**)")
     else:
-        st.error(f"❌ Loan Not Approved. (Probability: **{probability:.2f}**)")
+        st.error(f"❌ Loan Not Approved. (Probability: **{probability*100:.2f}%**)")
 
 
 
